@@ -1,0 +1,135 @@
+/* Main Container */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem; /* balanced padding */
+  /* border-bottom: 1px solid #e5e7eb; border-gray-200 */
+  transition: background-color 0.3s ease;
+}
+
+.white-bg {
+  background-color: #ffffff;
+}
+
+.cyan-bg {
+  background-color: rgba(207, 250, 254, 0.9); /* softer cyan */
+  backdrop-filter: blur(6px); /* glass effect */
+}
+
+/* Logo */
+.navbar-logo {
+  width: 7rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 1024px) {
+  .navbar-logo {
+    width: 8rem;
+  }
+}
+
+/* Desktop Links */
+.navbar-links {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+  color: #374151; /* text-gray-700 */
+  font-weight: 500;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #2563eb; /* blue-600 */
+}
+
+.navbar-links-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.create-btn {
+  background: linear-gradient(135deg, #2563eb, #1e40af); /* blue gradient */
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.create-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.5);
+}
+
+@media (min-width: 768px) {
+  .navbar-links {
+    display: flex; /* visible on md+ */
+  }
+}
+
+/* Mobile Links */
+.navbar-mobile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #374151;
+}
+
+.navbar-mobile button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-mobile img {
+  width: 1.75rem;
+  height: 1.75rem;
+  transition: transform 0.2s ease;
+}
+
+.navbar-mobile img:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 640px) {
+  .navbar-mobile {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-mobile {
+    display: none; /* hide on md+ */
+  }
+}
+/* Button styled like link */
+.link-style-btn {
+  background: none;
+  border: none;
+  color: inherit; 
+  font: inherit; 
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link-style-btn:hover {
+  color: #2563eb;
+}

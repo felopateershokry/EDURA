@@ -6,3 +6,12 @@
   box-sizing: border-box;
   font-family: 'outfit', sans-serif;
 }
+::selection {
+  background: #e9d5ff;  /* soft lavender */
+  color: #4c1d95;       /* deep violet text */
+}
+
+::-moz-selection {
+  background: #e9d5ff;
+  color: #4c1d95;
+}

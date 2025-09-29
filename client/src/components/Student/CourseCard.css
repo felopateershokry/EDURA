@@ -1,0 +1,80 @@
+.course-card {
+  display: block;
+  border: 1px solid rgba(107, 114, 128, 0.15); /* softer border */
+  border-radius: 0.75rem; /* slightly more rounded */
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); /* subtle shadow */
+  transition: all 0.3s ease-in-out;
+  padding-bottom: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  background: #ffffff; /* clean white card */
+}
+
+.course-card:hover {
+  transform: translateY(-5px); /* lift effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* deeper hover shadow */
+}
+
+.course-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-card:hover img {
+  transform: scale(1.03); /* slight zoom on hover */
+}
+
+.course-card .card-body {
+  padding: 1rem; /* more breathing room */
+  text-align: left;
+}
+
+.course-card h3 {
+  font-size: 1.125rem; /* larger heading */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111827; /* dark text */
+  line-height: 1.4;
+}
+
+.course-card p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #6b7280; /* muted text */
+}
+
+.course-card .rating {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+}
+
+.course-card .rating p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.course-card .stars {
+  display: flex;
+  gap: 0.15rem;
+}
+
+.course-card .stars img {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.course-card .price {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-top: 0.75rem;
+}
+.course-card .price del {
+  color: #9ca3af; /* lighter gray for original price */
+  font-weight: 400;
+  margin-left: 0.5rem;
+}

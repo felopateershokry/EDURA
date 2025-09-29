@@ -1,6 +1,7 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
 import './Hero.css'
+import SearchBar from './SearchBar';
 
 const Hero = () => {
     return (
@@ -15,6 +16,7 @@ const Hero = () => {
             
             <p className="hero-subtext">
                 Learn through gaming! Master subjects with our retro Atari-style educational platform.</p>
+            <SearchBar />
         </div>
 
 

@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { assets } from './../../assets/assets';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 import { useClerk, UserButton, useUser } from '@clerk/clerk-react';
+import { AppContext } from '../../context/AppContext';
 
 const Navbar = () => {
+
+    const {navigate, isEducator} = useContext(AppContext);
 
     const isCourseListPage = location.pathname === '/course-list';
 
@@ -15,13 +18,13 @@ const Navbar = () => {
 
     return (
         <div className={`navbar-container ${isCourseListPage ? "white-bg" : "cyan-bg"}`}>
-            <img src={assets.logo} alt="Logo" className="navbar-logo" />
+            <img onClick={()=> navigate('/')} src={assets.logo} alt="Logo" className="navbar-logo" />
 
         <div className="navbar-links">
             <div className="navbar-links-group">
                 {user && 
                 <>
-                <button className='become link-style-btn'>Become Educator</button> | <Link to="/my-enrollments" className='become link-style-btn'>My Enrollments</Link>
+                        <button onClick={()=>{ navigate('/educator') }} className='become link-style-btn'>{ isEducator ? 'Educator Dashboard' : 'Become Educator' }</button> | <Link to="/my-enrollments" className='become link-style-btn'>My Enrollments</Link>
                 </>}
             </div>
             { user ? <UserButton /> :
@@ -33,7 +36,7 @@ const Navbar = () => {
             <div className="navbar-links-group">
                 {user && 
                 <>
-                <button className='become link-style-btn'>Become Educator</button> | <Link to="/my-enrollments" className='become link-style-btn'>My Enrollments</Link>
+                        <button onClick={()=>{ navigate('/educator') }} className='become link-style-btn'>{ isEducator ? 'Educator Dashboard' : 'Become Educator' }</button> | <Link to="/my-enrollments" className='become link-style-btn'>My Enrollments</Link>
                 </>}
             </div>
             {user ? <UserButton /> :

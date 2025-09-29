@@ -1,0 +1,66 @@
+
+.search-form {
+  width: 100%;
+  max-width: 700px; /* keeps it centered and not too wide */
+  height: 3.2rem;
+  background: #ffffff;
+  border-radius: 9999px; /* fully rounded pill shape */
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.search-form:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.search-form img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 0.75rem;
+  opacity: 0.7;
+}
+
+.search-form input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #374151; /* gray-700 */
+  background: transparent;
+}
+
+.search-form input::placeholder {
+  color: #9ca3af; /* gray-400 */
+}
+
+.search-form button {
+  background: #2563eb; /* blue-600 */
+  border: none;
+  border-radius: 9999px; /* pill button */
+  color: #ffffff;
+  font-weight: 500;
+  padding: 0.6rem 1.8rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.search-form button:hover {
+  background: #1d4ed8; /* darker blue */
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .search-form {
+    height: 3.5rem;
+  }
+
+  .search-form button {
+    padding: 0.75rem 2.5rem;
+  }
+}
+

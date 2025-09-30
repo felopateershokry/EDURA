@@ -64,3 +64,40 @@
   }
 }
 
+/* ===== Mobile Styles ===== */
+@media (max-width: 767px) {
+.search-form {
+max-width: 100%;
+height: 3rem;               /* comfortable touch height */
+padding: 0 0.5rem;
+border-radius: 9999px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* lighter mobile shadow */
+}
+
+.search-form img {
+width: 1.4rem;
+height: 1.4rem;
+margin-right: 0.5rem;        /* tight but clean spacing */
+opacity: 0.75;
+}
+
+.search-form input {
+font-size: 0.95rem;
+padding: 0.35rem 0;
+min-width: 0;                /* prevents overflow */
+}
+
+.search-form button {
+padding: 0.5rem 1.3rem;
+font-size: 0.9rem;
+font-weight: 600;
+border-radius: 9999px;
+background: #2563eb;         /* solid blue */
+transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.search-form button:hover {
+background: #1d4ed8;         /* darker hover */
+transform: scale(1.04);
+}
+}

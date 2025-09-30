@@ -1,0 +1,194 @@
+footer {
+background: linear-gradient(180deg, #0f172a, #111827); /* dark gradient */
+width: 100%;
+margin-top: 2.5rem;
+padding: 0 2rem;
+font-family: "Inter", sans-serif;
+}
+
+@media (min-width: 768px) {
+footer {
+padding: 0 9rem; /* md:px-36 */
+}
+}
+
+/* ===== Footer Top Content ===== */
+footer > div {
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+justify-content: space-between;
+align-items: flex-start;
+padding: 2.5rem 0;
+border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@media (min-width: 768px) {
+footer > div {
+flex-direction: row;
+align-items: flex-start; /* keep left alignment for columns */
+}
+}
+
+/* ===== Logo & Description ===== */
+footer img {
+max-width: 170px;
+transition: transform 0.3s ease, filter 0.3s ease;
+filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.25));
+}
+
+footer img:hover {
+transform: scale(1.08);
+filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.4));
+}
+
+footer p {
+margin: 1.25rem 0 0 0;
+font-size: 0.95rem;
+max-width: 320px;
+color: rgba(229, 231, 235, 0.85);
+text-align: center;
+line-height: 1.7;
+letter-spacing: 0.2px;
+}
+
+@media (min-width: 768px) {
+footer p {
+text-align: left;
+}
+}
+
+/* ===== Headings ===== */
+footer h2 {
+font-weight: 600;
+color: #fff;
+margin-bottom: 1.25rem;
+font-size: 1.1rem;
+position: relative;
+}
+
+footer h2::after {
+content: "";
+display: block;
+width: 40%;
+height: 2px;
+background: #3b82f6;
+margin-top: 0.4rem;
+border-radius: 2px;
+transition: 0.5s ease;
+}
+footer h2:hover::after {
+width: 100%;
+}
+
+/* ===== Company Links (Always Column) ===== */
+footer ul {
+display: flex;
+flex-direction: column; /* always column */
+gap: 0.6rem;
+font-size: 0.9rem;
+color: rgba(255, 255, 255, 0.8);
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+footer ul a {
+text-decoration: none;
+color: inherit;
+position: relative;
+transition: color 0.3s ease;
+}
+
+footer ul a::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -3px;
+width: 0;
+height: 2px;
+background: #3b82f6;
+transition: width 0.3s ease;
+}
+
+footer ul a:hover {
+color: #3b82f6;
+}
+
+footer ul a:hover::after {
+width: 100%;
+}
+
+/* ===== Newsletter ===== */
+footer .hidden.md\:flex {
+display: none;
+}
+
+@media (min-width: 768px) {
+footer .hidden.md\:flex {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+width: 100%;
+}
+}
+
+footer input[type="email"] {
+padding: 0 0.75rem;
+border: 1px solid rgba(107, 114, 128, 0.3);
+background-color: #1e293b;
+color: #e5e7eb;
+width: 16rem;
+height: 2.5rem;
+border-radius: 6px;
+outline: none;
+font-size: 0.85rem;
+transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer input[type="email"]::placeholder {
+color: rgba(200, 200, 200, 0.6);
+}
+
+footer input[type="email"]:focus {
+border-color: #3b82f6;
+box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+background-color: #111827;
+}
+
+footer button {
+background: linear-gradient(135deg, #3b82f6, #2563eb);
+color: #fff;
+width: 6rem;
+height: 2.5rem;
+border-radius: 6px;
+border: none;
+cursor: pointer;
+font-size: 0.9rem;
+font-weight: 500;
+transition: transform 0.25s ease, background 0.25s ease;
+}
+
+footer button:hover {
+transform: translateY(-3px) scale(1.05);
+background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+/* ===== Bottom Copy ===== */
+footer > p {
+padding: 1rem 0;
+text-align: center;
+font-size: 0.8rem;
+color: rgba(255, 255, 255, 0.6);
+transition: color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+footer > p {
+font-size: 0.875rem;
+}
+}
+
+footer > p:hover {
+color: rgba(255, 255, 255, 0.8);
+}

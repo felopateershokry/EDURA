@@ -1,0 +1,100 @@
+/* ===== Call To Action Section ===== */
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+  padding: 4rem 2rem 7rem;
+  text-align: center;
+  background-size: 200% 200%;
+  animation: gradientShift 12s ease infinite;
+}
+
+/* Subtle animated gradient background */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Title ===== */
+.cta-title {
+  font-size: 1.75rem;
+  color: #111827; /* almost black */
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.5px;
+  background: #6366f1;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .cta-title {
+    font-size: 3rem;
+  }
+}
+
+/* ===== Subtitle ===== */
+.cta-subtitle {
+  color: #374151;
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+
+/* ===== Buttons Container ===== */
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: center;
+  font-weight: 600;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* ===== Primary Button ===== */
+.btn-primary {
+  padding: 0.9rem 2.8rem;
+  border-radius: 0.75rem;
+  background: #6366f1;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.3);
+}
+
+/* ===== Secondary Button ===== */
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #2563eb;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+  transform: translateX(5px);
+}

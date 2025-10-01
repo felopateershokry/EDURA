@@ -15,7 +15,7 @@ const CourseCard = ({ course }) => {
             <img src={course.courseThumbnail} alt="" />
             <div className="card-body">
                 <h3>{course.courseTitle}</h3>
-                <p>Instructor: {course.educator.name}</p>
+                <p>Felopateer Shokry</p>
                 <div className="rating">
                     <p>{calculatRating(course)}</p>
                     <div className="stars">

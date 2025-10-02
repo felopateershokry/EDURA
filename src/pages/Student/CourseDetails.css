@@ -437,3 +437,8 @@ button.enroll:disabled {
   color: #ef4444; /* brighter red for catching attention */
   font-weight: 700;
 }
+
+.player{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}

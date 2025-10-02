@@ -8,6 +8,7 @@ import humanizeDuration from 'humanize-duration';
 import './CourseDetails.css'
 import Footer from '../../components/Student/Footer';
 import CourseCard from './../../components/Student/CourseCard';
+import YouTube from 'react-youtube';
 const CourseDetails = () => {
 
     const { id } = useParams();
@@ -15,6 +16,7 @@ const CourseDetails = () => {
     const [courseData, setCourseData] = useState();
     const [openSections, setOpenSections] = useState({});
     const [isAlreadyEnrolled, setisAlreadyEnrolled] = useState(false);
+    const [playerData, setPlayerData] = useState(null);
 
     const { allCourses, calculatRating, calculateChapterTime, calculateCourseDuration, calculateNoOfLectures, currency} = useContext(AppContext);
     
@@ -24,7 +26,7 @@ const CourseDetails = () => {
     }
     useEffect(() => {
             fetchCourseData();
-    }, []);
+    }, [allCourses]);
 
     const toggleSection = (index) => { 
         setOpenSections((prev) => (
@@ -91,7 +93,9 @@ const CourseDetails = () => {
                                                 <div className="lecture-info">
                                                     <p>{lecture.lectureTitle}</p>
                                                     <div className="lecture-meta">
-                                                        {lecture.isPreviewFree && <p className="preview-link">Preview</p>}
+                                                        {lecture.isPreviewFree && <p onClick={() => setPlayerData({
+                                                            videoId: lecture.lectureUrl.split('/').pop(),
+                                                        })} className="preview-link">Preview</p>}
                                                         <p>{humanizeDuration(lecture.lectureDuration * 60 * 1000, { units: ['h','m']})}</p>
                                                     </div>
                                                 </div>
@@ -115,10 +119,13 @@ const CourseDetails = () => {
 
             {/* Right Section */}
             <div className="course-right">
-                <img src={courseData.courseThumbnail} alt="" />
+                {
+                    playerData ? 
+                        <YouTube videoId={playerData.videoId} opts={{playerVars: { 'autoplay': 1 }}} iframeClassName='player'/>
+                    :<img src={courseData.courseThumbnail} alt="" />
+                }
                 <div className='course-right-content'>
-                    <div className='course-time-left'>
-                        {/* <img className='clock-icon' src={assets.time_left_clock_icon} alt="time_left_clock_icon" /> */}
+                        <div className='course-time-left'>
                         <p><span className='highlight'>5 days </span>left at this price</p>
                     </div>
 

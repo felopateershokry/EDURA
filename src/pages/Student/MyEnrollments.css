@@ -1,0 +1,282 @@
+/* ===== Container ===== */
+.enrollments-container {
+  padding: 2.5rem 2rem 0 2rem; /* pt-10 px-8 */
+  background: linear-gradient(to bottom, #f9fafb, #fff);
+  min-height: 100vh;
+}
+
+.enrollments-title {
+  font-size: 1.8rem; 
+  font-weight: 700; 
+  color: #111827;
+  margin-bottom: 1rem;
+  position: relative;
+  text-align: left;
+}
+
+.enrollments-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #9333ea);
+  margin-top: 6px;
+  border-radius: 3px;
+  transition: 0.7s ease;
+}
+.enrollments-title:hover::after {
+  width: 220px;
+}
+
+/* ===== Table ===== */
+.enrollments-table {
+  width: 100%;
+  margin-top: 2.5rem;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.table-head {
+  background: linear-gradient(90deg, #f3f4f6, #e5e7eb);
+  color: #111827;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.table-th {
+  padding: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table-body {
+  color: #374151;
+}
+
+.table-row {
+  transition: background 0.25s ease;
+}
+
+.table-row:hover {
+  background: #f9fafb;
+}
+
+.table-course {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.course-thumbnail {
+  width: 5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.course-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.course-info {
+  flex: 1;
+}
+
+.course-title {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+/* ===== Table Data Cells ===== */
+.table-td {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* ===== Progress Bar ===== */
+.progress-bar {
+  border-radius: 9999px;
+  height: 8px;
+  margin-top: 0.5rem;
+}
+
+.completed-progress path {
+  stroke: #10b981 !important; /* أخضر */
+}
+
+.ongoing-progress path {
+  stroke: #3b82f6 !important; /* أزرق */
+}
+
+/* ===== Status Button ===== */
+.status-btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.status-btn.completed {
+  background: linear-gradient(90deg, #34d399, #10b981);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(16,185,129,0.3);
+}
+
+.status-btn.completed:hover {
+  background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.status-btn.ongoing {
+  background: linear-gradient(90deg, #60a5fa, #3b82f6);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(59,130,246,0.3);
+}
+
+.status-btn.ongoing:hover {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+}
+
+/* ===== Responsive Design ===== */
+
+/* 📱 Mobile screens */
+@media (max-width: 768px) {
+  .enrollments-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .enrollments-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .enrollments-title::after {
+    margin: 0.5rem auto;
+  }
+
+  .enrollments-table,
+  .table-head {
+    display: block;
+  }
+
+  .table-head {
+    display: none; /* نخفي الـ header */
+  }
+
+  .table-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .table-row {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 1rem;
+  }
+
+  .table-course {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .course-thumbnail {
+    width: 4rem;
+  }
+
+  .course-title {
+    font-size: 0.95rem;
+  }
+
+  .table-td {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+
+  .status-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.75rem;
+  }
+}
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+  .course-thumbnail {
+    width: 3.2rem;
+  }
+
+  .course-title {
+    font-size: 0.85rem;
+  }
+
+  .status-btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 1rem;
+  }
+}
+/* ===== Responsive: 770px → 933px ===== */
+@media (min-width: 770px) and (max-width: 933px) {
+  .enrollments-container {
+    padding: 2rem 1rem;
+  }
+
+  .enrollments-title {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+
+  .enrollments-table {
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+  }
+
+  /* اجعل الأعمدة أنسب للشمسات المتوسطة */
+  .table-th,
+  .table-td {
+    padding: 0.8rem;
+  }
+
+  /* الكورس والصورة يبقوا جنب بعض بس بشكل متوازن */
+  .course-thumbnail {
+    width: 4.5rem;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .course-info {
+    max-width: 220px; /* يمنع النص من التوسع الزايد */
+  }
+
+  .course-title {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+
+  /* أزرار الحالة تبقى أوضح وأعرض شوية */
+  .status-btn {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.85rem;
+  }
+
+  /* الحل النهائي لو الجدول عريض → سكرول أفقي */
+  .enrollments-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

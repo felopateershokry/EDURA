@@ -1,0 +1,94 @@
+/* ===== Footer Container ===== */
+.footer-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 2rem; /* px-8 */
+  border-top: 1px solid #6b7280; /* gray-500 */
+  background-color: #ffffff;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+  }
+}
+
+/* ===== Left Section ===== */
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer-left {
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
+.footer-logo {
+  display: none;
+  width: 5rem; /* w-20 */
+}
+
+@media (min-width: 768px) {
+  .footer-logo {
+    display: block;
+  }
+}
+
+.footer-divider {
+  display: none;
+  width: 1px;
+  height: 1.75rem; /* h-7 */
+  background-color: rgba(107, 114, 128, 0.6); /* gray-500/60 */
+}
+
+@media (min-width: 768px) {
+  .footer-divider {
+    display: block;
+  }
+}
+
+.footer-text {
+  font-size: 0.75rem; /* text-xs */
+  color: #6b7280; /* gray-500 */
+}
+
+@media (min-width: 768px) {
+  .footer-text {
+    font-size: 0.875rem; /* md:text-sm */
+  }
+}
+
+/* ===== Right Section ===== */
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer-right {
+    margin-top: 0;
+  }
+}
+
+/* ===== Social icons hover ===== */
+.footer-right a img {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.footer-right a:hover img {
+  transform: scale(1.1);
+}

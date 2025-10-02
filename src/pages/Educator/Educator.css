@@ -1,0 +1,13 @@
+.educator-container {
+  color: #111827;       /* text-default */
+  min-height: 100vh;    /* min-h-screen */
+  background-color: #ffffff; /* bg-white */
+  /* If you want transparent instead of white, use: */
+  /* background-color: transparent; */
+}
+.educator-content{
+    display: flex;
+}
+.educator-main-content{
+    flex: 1;
+}

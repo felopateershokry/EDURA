@@ -1,4 +1,4 @@
-footer {
+.footer-student {
 background: linear-gradient(180deg, #0f172a, #111827); /* dark gradient */
 width: 100%;
 margin-top: 2.5rem;
@@ -7,13 +7,13 @@ font-family: "Inter", sans-serif;
 }
 
 @media (min-width: 768px) {
-footer {
+.footer-student {
 padding: 0 9rem; /* md:px-36 */
 }
 }
 
 /* ===== Footer Top Content ===== */
-footer > div {
+.footer-student > div {
 display: flex;
 flex-direction: column;
 gap: 1.5rem;
@@ -24,25 +24,25 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 @media (min-width: 768px) {
-footer > div {
+.footer-student > div {
 flex-direction: row;
 align-items: flex-start; /* keep left alignment for columns */
 }
 }
 
 /* ===== Logo & Description ===== */
-footer img {
+.footer-student img {
 max-width: 170px;
 transition: transform 0.3s ease, filter 0.3s ease;
 filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.25));
 }
 
-footer img:hover {
+.footer-student img:hover {
 transform: scale(1.08);
 filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.4));
 }
 
-footer p {
+.footer-student p {
 margin: 1.25rem 0 0 0;
 font-size: 0.95rem;
 max-width: 320px;
@@ -53,13 +53,13 @@ letter-spacing: 0.2px;
 }
 
 @media (min-width: 768px) {
-footer p {
+.footer-student p {
 text-align: left;
 }
 }
 
 /* ===== Headings ===== */
-footer h2 {
+.footer-student h2 {
 font-weight: 600;
 color: #fff;
 margin-bottom: 1.25rem;
@@ -67,7 +67,7 @@ font-size: 1.1rem;
 position: relative;
 }
 
-footer h2::after {
+.footer-student h2::after {
 content: "";
 display: block;
 width: 40%;
@@ -77,12 +77,12 @@ margin-top: 0.4rem;
 border-radius: 2px;
 transition: 0.5s ease;
 }
-footer h2:hover::after {
+.footer-student h2:hover::after {
 width: 100%;
 }
 
 /* ===== Company Links (Always Column) ===== */
-footer ul {
+.footer-student ul {
 display: flex;
 flex-direction: column; /* always column */
 gap: 0.6rem;
@@ -93,14 +93,14 @@ padding: 0;
 margin: 0;
 }
 
-footer ul a {
+.footer-student ul a {
 text-decoration: none;
 color: inherit;
 position: relative;
 transition: color 0.3s ease;
 }
 
-footer ul a::after {
+.footer-student ul a::after {
 content: "";
 position: absolute;
 left: 0;
@@ -111,21 +111,21 @@ background: #3b82f6;
 transition: width 0.3s ease;
 }
 
-footer ul a:hover {
+.footer-student ul a:hover {
 color: #3b82f6;
 }
 
-footer ul a:hover::after {
+.footer-student ul a:hover::after {
 width: 100%;
 }
 
 /* ===== Newsletter ===== */
-footer .hidden.md\:flex {
+.footer-student .hidden.md\:flex {
 display: none;
 }
 
 @media (min-width: 768px) {
-footer .hidden.md\:flex {
+.footer-student .hidden.md\:flex {
 display: flex;
 flex-direction: column;
 align-items: flex-start;
@@ -133,7 +133,7 @@ width: 100%;
 }
 }
 
-footer input[type="email"] {
+.footer-student input[type="email"] {
 padding: 0 0.75rem;
 border: 1px solid rgba(107, 114, 128, 0.3);
 background-color: #1e293b;
@@ -146,17 +146,17 @@ font-size: 0.85rem;
 transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
-footer input[type="email"]::placeholder {
+.footer-student input[type="email"]::placeholder {
 color: rgba(200, 200, 200, 0.6);
 }
 
-footer input[type="email"]:focus {
+.footer-student input[type="email"]:focus {
 border-color: #3b82f6;
 box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
 background-color: #111827;
 }
 
-footer button {
+.footer-student button {
 background: linear-gradient(135deg, #3b82f6, #2563eb);
 color: #fff;
 width: 6rem;
@@ -169,13 +169,13 @@ font-weight: 500;
 transition: transform 0.25s ease, background 0.25s ease;
 }
 
-footer button:hover {
+.footer-student button:hover {
 transform: translateY(-3px) scale(1.05);
 background: linear-gradient(135deg, #2563eb, #1e40af);
 }
 
 /* ===== Bottom Copy ===== */
-footer > p {
+.footer-student > p {
 padding: 1rem 0;
 text-align: center;
 font-size: 0.8rem;
@@ -184,11 +184,11 @@ transition: color 0.3s ease;
 }
 
 @media (min-width: 768px) {
-footer > p {
+.footer-student > p {
 font-size: 0.875rem;
 }
 }
 
-footer > p:hover {
+.footer-student > p:hover {
 color: rgba(255, 255, 255, 0.8);
 }

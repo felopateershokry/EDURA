@@ -1,0 +1,92 @@
+/* ===== Sidebar Container ===== */
+.sidebar-container {
+  width: 4rem;                    /* mobile width */
+  min-height: 100vh;              /* full height */
+  border-right: 1px solid #6b7280;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5rem;
+  font-size: 1rem;
+  background-color: #f9fafb;      /* light background */
+  overflow-y: auto;
+}
+
+/* Optional: scroll styling */
+.sidebar-container::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar-container::-webkit-scrollbar-thumb {
+  background-color: rgba(107,114,128,0.3);
+  border-radius: 3px;
+}
+.sidebar-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ===== Sidebar Items ===== */
+.sidebar-item {
+  display: flex;
+  flex-direction: column;         /* stacked on mobile */
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;                   /* spacing between icon & text */
+  padding: 0.875rem 0;            /* py-3.5 */
+  border-right: 6px solid white;  /* default border */
+  border-radius: 0 8px 8px 0;
+  text-decoration: none;
+  color: #374151;                 /* default text-gray */
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.sidebar-item:hover {
+  background-color: rgba(243,244,246,0.9); /* light gray */
+  border-color: rgba(243,244,246,0.9);
+  color: #111827;
+}
+
+/* Active state */
+.sidebar-item.active {
+  background-color: #eef2ff;             /* bg-indigo-50 */
+  border-right: 6px solid rgba(79,70,229,0.9); /* border-indigo-500/90 */
+  color: #1e3a8a;                        /* dark indigo text */
+}
+
+/* ===== Sidebar Icon ===== */
+.sidebar-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-item:hover .sidebar-icon {
+  transform: scale(1.1);
+}
+
+/* ===== Sidebar Text ===== */
+.sidebar-text {
+  display: none;            /* hidden on mobile */
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ===== Desktop / Medium screens ===== */
+@media (min-width: 768px) {
+  .sidebar-container {
+    width: 16rem;           /* desktop width */
+  }
+
+  .sidebar-item {
+    flex-direction: row;          /* side-by-side icon + text */
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.875rem 2.5rem;     /* md:px-10 */
+    gap: 1rem;                     /* spacing icon & text */
+  }
+
+  .sidebar-text {
+    display: block;               /* show text */
+  }
+}

@@ -4,11 +4,13 @@ import { AppContext } from "../../context/AppContext";
 import { useParams } from "react-router-dom";
 import { assets } from "../../assets/assets";
 import humanizeDuration from "humanize-duration";
-
+import YouTube from "react-youtube";
+import Footer from "../../components/Student/Footer";
+import Rating from "../../components/Student/Rating";
 const Player = () => {
 
     const { enrolledCourses, calculateChapterTime } = useContext(AppContext); 
-    const { courseID } = useParams();
+    const { courseId } = useParams();
     const [courseData, setCourseData] = useState();
     const [openSections, setOpenSections] = useState({});
     const [playerData, setPlayerData] = useState(null);
@@ -21,14 +23,14 @@ const Player = () => {
 
         const getCourseData = () => {
             enrolledCourses.map((course) => {
-                if (course._id === courseID) {
+                if (course._id === courseId) {
                     setCourseData(course);
                 }
             });
         }
         useEffect(() => {
             getCourseData();
-        }, [ ]);
+        }, [enrolledCourses]);
 
 
     return (
@@ -102,11 +104,29 @@ const Player = () => {
                     </div>
                 </div>
                 ))}
-            </div>
+                    </div>
+                    <div className="rate-course">
+                        <h1 className="rate-title">Rate this Course:</h1>
+                        <Rating initialRating={0} />
+                    </div>
+
             </div>
             {/* Right */}
-            <div></div>
-        </div>
+                <div>
+                    {playerData ? (
+                        <div>
+                            <YouTube videoId={playerData.lectureUrl.split('/').pop()} iframeClassName='player-v' />
+                            <div className="lecture-header">
+                                <p>{playerData.chapter}.{playerData.lecture} {playerData.lectureTitle}</p>
+                                <button className="complete-btn">{false? 'Completed' : 'Mark as Completed'}</button>
+                            </div>
+                        </div>
+                    )
+                        : <img src={courseData ? courseData.courseThumbnail : ""} alt="" className="player-v"/>
+                    }
+            </div>
+            </div>
+            <Footer />
         </>
     );
     };

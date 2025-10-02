@@ -1,0 +1,179 @@
+/* ===== Container ===== */
+.dashboard-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  font-family: 'Inter', sans-serif;
+}
+
+/* ===== Stats Cards Wrapper ===== */
+.dashboard-stats-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* ===== Individual Card ===== */
+.dashboard-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  padding: 1.25rem 1.5rem;
+  width: 14rem;
+  border-left: 5px solid #3b82f6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.dashboard-card-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #3b82f6;
+}
+
+.dashboard-card-value {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #111827; /* dark gray */
+}
+
+.dashboard-card-label {
+  font-size: 1rem;
+  color: #6b7280; /* gray-500 */
+}
+
+/* ===== Latest Enrolments Section ===== */
+.dashboard-latest-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.dashboard-latest-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  align-self: flex-start;
+  color: #1e293b; /* slate-800 */
+}
+
+/* ===== Table Wrapper ===== */
+.dashboard-table-wrapper {
+  width: 100%;
+  max-width: 64rem;
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  border: 1px solid rgba(107,114,128,0.15);
+}
+
+/* ===== Table ===== */
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.dashboard-table thead th {
+  border-bottom: 2px solid #e5e7eb;
+  font-weight: 600;
+}
+
+.dashboard-tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s ease;
+}
+
+.dashboard-tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Index column */
+.dashboard-th-index,
+.dashboard-td-index {
+  text-align: center;
+  font-weight: 500;
+  color: #64748b;
+}
+
+/* ===== Student Cell ===== */
+.dashboard-td-student {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dashboard-student-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 2px solid #3b82f6;
+}
+
+.dashboard-student-name {
+  max-width: 12rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+/* ===== Course Cell ===== */
+.dashboard-td-course {
+  max-width: 15rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+  color: #334155;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .dashboard-card {
+    width: 100%;
+  }
+
+  .dashboard-table-wrapper {
+    border: none;
+    box-shadow: none;
+  }
+
+  .dashboard-table th,
+  .dashboard-table td {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-card-icon {
+    margin-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,20 @@
+.star {
+  font-size: 1.25rem;           /* text-xl */
+  cursor: pointer;
+  transition: color 0.2s ease;  /* transition-colors */
+}
+
+/* للشاشات أكبر من sm (640px) */
+@media (min-width: 640px) {
+  .star {
+    font-size: 1.5rem; /* sm:text-2xl */
+  }
+}
+
+.star-active {
+  color: #facc15; /* text-yellow-500 */
+}
+
+.star-inactive {
+  color: #9ca3af; /* text-gray-400 */
+}

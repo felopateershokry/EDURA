@@ -1,13 +1,16 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
 import './Footer.css'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
-        <footer className="footer">
+        <footer className="footer-student">
             <div className="footer-content">
                 <div className="footer-col">
-                    <img src={assets.logo_dark} alt="logo" />
+                    <Link to="/">
+                        <img src={assets.logo_dark} alt="logo" />
+                    </Link>
                     <p className="footer-description">
                         Edura The Ultimate Gaming Learning Experience
                     </p>

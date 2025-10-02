@@ -1,0 +1,40 @@
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem; /* px-4 py-3 */
+  border-bottom: 1px solid #6b7280; /* border-gray-500 */
+}
+
+@media (min-width: 768px) {
+  .navbar-container {
+    padding: 0.75rem 2rem; /* md:px-8 */
+  }
+}
+
+/* Logo image */
+.logo-img {
+  width: 7rem; /* w-28 */
+}
+
+@media (min-width: 1024px) {
+  .logo-img {
+    width: 8rem; /* lg:w-32 */
+  }
+}
+
+/* Right side container */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* gap-5 */
+  color: #6b7280; /* text-gray-500 */
+  position: relative;
+}
+
+/* Profile image */
+.profile-img {
+  max-width: 2rem; /* max-w-8 in Tailwind ≈ 2rem */
+  height: auto;
+  border-radius: 50%; /* optional, for round profile */
+}

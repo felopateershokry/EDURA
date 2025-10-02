@@ -442,3 +442,10 @@ button.enroll:disabled {
   width: 100%;
   aspect-ratio: 16 / 9;
 }
+.discount-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #475569;
+}

@@ -126,13 +126,17 @@ const CourseDetails = () => {
                 }
                 <div className='course-right-content'>
                         <div className='course-time-left'>
-                        <p><span className='highlight'>5 days </span>left at this price</p>
+                        {/* <p><span className='highlight'>5 days </span>left at this price</p> */}
                     </div>
 
                     <div className='course-price'>
                         <p className='current-price'>{currency}{(courseData.coursePrice - courseData.discount * courseData.coursePrice / 100).toFixed(2)}</p>
-                        <p className='original-price'>{currency}{courseData.coursePrice}</p>
-                        <p className='discount'>{courseData.discount}% off</p>
+                            {courseData.discount !== 0 ?
+                                    <div className='discount-container'>
+                                    <p className='original-price'>{currency}{courseData.coursePrice}</p>
+                                    <p className='discount'>{courseData.discount}% off</p>
+                                    </div>
+                            : null}
                     </div>
 
                     <div className='course-stats'>

@@ -10,7 +10,6 @@ const Hero = () => {
                 Welcome to Edura
                 <h2 className="hero-subheading">
                     The Ultimate Gaming Learning Experience
-                    <img src={assets.sketch} alt="sketch" className="hero-sketch" />
                 </h2>
             </h1>
             
